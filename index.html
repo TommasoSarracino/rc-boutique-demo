@@ -2,181 +2,208 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RC Boutique · Donna e Bambini</title>
 <meta name="description" content="RC Boutique: moda donna e bambini, abiti da cerimonia, capi di ogni giorno e accessori. Moda, stile e lusso per tutta la famiglia.">
-<meta name="theme-color" content="#0c0a08">
+<meta name="theme-color" content="#070605">
 <meta property="og:title" content="RC Boutique · Donna e Bambini">
 <meta property="og:description" content="Moda, stile e lusso per tutta la famiglia.">
 <meta property="og:image" content="assets/img/logo-nero.webp">
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
+<div class="cursor" aria-hidden="true"><span></span></div>
 
-<header class="hero" id="top">
-  <div class="hero__media">
-    <img class="hero__img" src="assets/img/galleria-notte.jpg" width="1800" height="1200" alt="Una galleria di negozi illuminata di notte, con il pavimento lucido che riflette la luce dorata delle vetrine" fetchpriority="high">
-  </div>
-  <nav class="nav" aria-label="Principale">
-    <a class="nav__mark" href="#top" aria-label="RC Boutique, inizio pagina"><img src="assets/img/corona.png" width="192" height="113" alt=""></a>
-    <ul class="nav__links" id="nav-links">
-      <li><a href="#collezioni">Collezioni</a></li>
+<header class="bar" id="bar">
+  <a class="bar__mark" href="#top" aria-label="RC Boutique, torna all’inizio"><img src="assets/img/corona.png" width="192" height="113" alt=""></a>
+  <nav class="bar__nav" aria-label="Principale">
+    <ul class="bar__links" id="nav-links">
+      <li><a href="#galleria">Collezioni</a></li>
       <li><a href="#listino">Listino</a></li>
       <li><a href="#look">Look di famiglia</a></li>
       <li><a href="#visita">Visita</a></li>
     </ul>
-    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
   </nav>
-  <div class="hero__band">
-    <div class="hero__row">
-      <p class="hero__lede">Moda donna e bambini in un’unica boutique: abiti da cerimonia, capi di ogni giorno e accessori scelti uno per uno.</p>
-      <a class="btn" href="#look">Prenota una prova</a>
-    </div>
-    <h1 class="hero__name"><span class="wordmark">RC Boutique</span></h1>
-  </div>
+  <a class="btn btn--gold bar__cta" href="#look"><span>Prenota una prova</span></a>
+  <button class="bar__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+    <span class="sr">Menu</span>
+    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 10h20M4 18h20" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+  </button>
 </header>
 
 <main id="main">
 
-  <section class="intro" aria-labelledby="intro-h">
-    <div class="intro__text">
-      <h2 id="intro-h" class="h-sec reveal">Mamma e figli, vestiti insieme</h2>
-      <p class="statement reveal">La mamma prova il suo abito, i bambini trovano il loro: stesso camerino, stessa cura, un solo look di famiglia.</p>
-      <p class="body reveal">Scegliamo ogni capo una stagione alla volta e in poche taglie, così il vestito della comunione non lo ritrovi in tutta la città. Tessuti naturali, finiture pulite, e una sarta in negozio per gli ultimi ritocchi.</p>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="hero__stage" id="crown-stage">
+      <img class="hero__fallback" src="assets/img/logo-nero.webp" width="1170" height="1137" alt="">
     </div>
-    <figure class="intro__logo reveal">
-      <img src="assets/img/logo-nero.webp" width="1170" height="1137" alt="Il marchio di RC Boutique: le lettere RC dorate sotto una corona di cristalli, tra la figura di una donna e due bambini" loading="lazy">
-    </figure>
-    <p class="intro__note reveal">Donna · Bambini. Moda, stile e lusso per tutta la famiglia, dalla taglia 40 alla 52 e da 0 a 14 anni.</p>
-  </section>
-
-  <section class="show" id="collezioni" aria-labelledby="show-h">
-    <div class="show__stage">
-      <img class="show__bg" src="assets/img/galleria-strada.jpg" width="1800" height="1350" alt="Una via dello shopping di sera, con le vetrine accese e l’ingresso di una galleria in fondo" loading="lazy">
-      <h2 id="show-h" class="show__title">Le collezioni</h2>
-      <ol class="show__track" role="list">
-        <li class="card" style="--panel:#2b2218">
-          <img src="assets/img/donna-1949.jpg" width="1705" height="1800" alt="Una donna in abito da sera lungo con guanti alti, fotografata in bianco e nero sul lungofiume" loading="lazy">
-          <div class="card__panel"><h3>Donna</h3><p>Abiti da sera, tailleur pantalone e camicie in seta, taglie 40–52.</p></div>
-        </li>
-        <li class="card" style="--panel:#1f2a24">
-          <img src="assets/img/cappotto-1951.jpg" width="982" height="1024" alt="Una donna in cappotto di lana spigato, in piedi su un prato davanti a un faro" loading="lazy">
-          <div class="card__panel"><h3>Capispalla</h3><p>Cappotti in lana, trench e giacche per la mezza stagione.</p></div>
-        </li>
-        <li class="card" style="--panel:#2d1e22">
-          <img src="assets/img/bambina-tulle.jpg" width="1096" height="1537" alt="Una bambina con abito di tulle bianco e fiori rossi cammina per mano a un uomo in abito scuro" loading="lazy">
-          <div class="card__panel"><h3>Bambina</h3><p>Abiti in tulle, fiocchi in raso e ballerine, da 2 a 14 anni.</p></div>
-        </li>
-        <li class="card card--art" style="--panel:#1e2530">
-          <img src="assets/img/bambini.webp" width="310" height="385" alt="Illustrazione RC Boutique: un bambino in completo bianco e una bambina in abito bianco con fiocco dorato" loading="lazy">
-          <div class="card__panel"><h3>Bambino</h3><p>Completi in lino, camicie con papillon e mocassini per le feste.</p></div>
-        </li>
-        <li class="card" style="--panel:#2a271c">
-          <img src="assets/img/cerimonia.jpg" width="1800" height="1350" alt="Un frac nero con gilet bianco e un abito da sposa in pizzo su due manichini" loading="lazy">
-          <div class="card__panel"><h3>Cerimonia</h3><p>Matrimoni, comunioni e battesimi: un look coordinato per tutti.</p></div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="list" id="listino" aria-labelledby="list-h">
-    <h2 id="list-h" class="h-sec reveal">Il listino</h2>
-    <p class="list__lede reveal">Prezzi di partenza in boutique. Ogni capo si prova in negozio; i ritocchi di orli e maniche sono inclusi sopra i € 150.</p>
-    <table class="lineup">
-      <caption class="sr">Articoli, dettagli, taglie e prezzi di partenza</caption>
-      <thead class="sr"><tr><th scope="col">Articolo</th><th scope="col">Dettaglio</th><th scope="col">Taglie</th><th scope="col">Prezzo</th></tr></thead>
-      <tbody>
-        <tr class="lineup__group"><th colspan="4" scope="colgroup">Donna</th></tr>
-        <tr><td>Abito da sera</td><td>Lungo o midi</td><td>40–52</td><td>da € 149</td></tr>
-        <tr><td>Tailleur pantalone</td><td>Lana e lino</td><td>40–52</td><td>da € 189</td></tr>
-        <tr><td>Camicia in seta</td><td>Sei colori</td><td>40–50</td><td>da € 79</td></tr>
-        <tr><td>Cappotto</td><td>Lana spigata</td><td>40–52</td><td>da € 229</td></tr>
-        <tr><td>Borsa a mano</td><td>Pelle liscia</td><td>Unica</td><td>da € 99</td></tr>
-      </tbody>
-      <tbody>
-        <tr class="lineup__group"><th colspan="4" scope="colgroup">Bambini</th></tr>
-        <tr><td>Abito in tulle</td><td>Bambina</td><td>2–14 anni</td><td>da € 89</td></tr>
-        <tr><td>Completo in lino</td><td>Bambino</td><td>2–14 anni</td><td>da € 99</td></tr>
-        <tr><td>Camicia e papillon</td><td>Bambino</td><td>2–14 anni</td><td>da € 45</td></tr>
-        <tr><td>Ballerine in raso</td><td>Bambina</td><td>22–35</td><td>da € 49</td></tr>
-      </tbody>
-      <tbody>
-        <tr class="lineup__group"><th colspan="4" scope="colgroup">Cerimonia</th></tr>
-        <tr><td>Abito da comunione</td><td>Con velo</td><td>8–11 anni</td><td>da € 179</td></tr>
-        <tr><td>Completo da paggetto</td><td>Tre pezzi</td><td>3–10 anni</td><td>da € 129</td></tr>
-        <tr><td>Set battesimo</td><td>Abito e cuffia</td><td>0–24 mesi</td><td>da € 69</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="look" id="look" aria-labelledby="look-h">
-    <div class="look__intro">
-      <h2 id="look-h" class="h-sec reveal">Il look di famiglia</h2>
-      <p class="body reveal">Scegli l’occasione e l’età di tuo figlio: ti proponiamo un abbinamento e la taglia da provare in boutique.</p>
-    </div>
-
-    <form class="look__form reveal" id="look-form" action="mailto:ciao@rcboutique.it" method="get">
-      <fieldset>
-        <legend>Occasione</legend>
-        <div class="chips">
-          <label><input type="radio" name="occ" value="matrimonio" checked><span>Matrimonio</span></label>
-          <label><input type="radio" name="occ" value="comunione"><span>Comunione</span></label>
-          <label><input type="radio" name="occ" value="battesimo"><span>Battesimo</span></label>
-          <label><input type="radio" name="occ" value="domenica"><span>Pranzo della domenica</span></label>
-          <label><input type="radio" name="occ" value="sera"><span>Una sera fuori</span></label>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Per</legend>
-        <div class="chips">
-          <label><input type="radio" name="kid" value="bambina" checked><span>Bambina</span></label>
-          <label><input type="radio" name="kid" value="bambino"><span>Bambino</span></label>
-        </div>
-      </fieldset>
-      <div class="age">
-        <label for="age">Età <output id="age-out" for="age">6 anni</output></label>
-        <input type="range" id="age" name="age" min="0" max="14" step="1" value="6">
-      </div>
-    </form>
-
-    <div class="look__result" aria-live="polite">
-      <figure class="pair">
-        <img src="assets/img/mamma.webp" width="275" height="570" alt="Illustrazione RC Boutique: una donna in tailleur pantalone bianco con borsa dorata" loading="lazy">
-        <img src="assets/img/bambini.webp" width="310" height="385" alt="" loading="lazy">
-      </figure>
-      <div class="pair__text">
-        <p class="pair__line"><span class="pair__who">Per te</span> <span id="r-mom">Abito midi in crêpe avorio con cintura dorata</span></p>
-        <p class="pair__line"><span class="pair__who" id="r-kid-who">Per lei</span> <span id="r-kid">Abito in tulle avorio con fiocco in raso oro</span></p>
-        <p class="pair__line"><span class="pair__who">Taglia da provare</span> <span id="r-size">6 anni · 116 cm</span></p>
-        <p class="pair__line"><span class="pair__who">Insieme da</span> <span id="r-price">€ 238</span></p>
-        <a class="btn" id="r-cta" href="mailto:ciao@rcboutique.it?subject=Prova%20look%20di%20famiglia">Prenota la prova</a>
+    <p class="hero__hint" aria-hidden="true">
+      <svg width="22" height="12" viewBox="0 0 22 12"><path d="M1 6h20M1 6l4-4M1 6l4 4M21 6l-4-4M21 6l-4 4" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+      Trascina la corona
+    </p>
+    <div class="hero__copy">
+      <p class="hero__sub">Donna <i></i> Bambini</p>
+      <p class="hero__lede">Moda donna e bambini in un’unica boutique: abiti da cerimonia, capi di ogni giorno e accessori scelti uno per uno.</p>
+      <div class="hero__actions">
+        <a class="btn btn--gold magnetic" href="#look"><span>Prenota una prova</span></a>
+        <a class="btn btn--line magnetic" href="#galleria"><span>Entra in galleria</span></a>
       </div>
     </div>
+    <h1 class="hero__name" id="hero-h" aria-label="RC Boutique, moda donna e bambini"><span class="hero__word">RC BOUTIQUE</span></h1>
   </section>
+
+  <section class="gal" id="galleria" aria-labelledby="gal-h">
+    <div class="gal__stage">
+      <div class="gal__canvas" id="gal-stage"></div>
+      <div class="gal__ui">
+        <h2 class="gal__title" id="gal-h">Le collezioni</h2>
+        <ol class="gal__captions" role="list">
+          <li class="cap is-on"><h3>Donna</h3><p>Abiti da sera, tailleur e camicie in seta, taglie 40–52.</p><span>da € 149</span></li>
+          <li class="cap"><h3>Capispalla</h3><p>Cappotti in lana spigata, trench e giacche di mezza stagione.</p><span>da € 229</span></li>
+          <li class="cap"><h3>Bambina</h3><p>Tulle, fiocchi in raso e ballerine, da 2 a 14 anni.</p><span>da € 89</span></li>
+          <li class="cap"><h3>Bambino</h3><p>Completi in lino, camicie con papillon e mocassini.</p><span>da € 99</span></li>
+          <li class="cap"><h3>Cerimonia</h3><p>Matrimoni e comunioni: un look coordinato per tutta la famiglia.</p><span>da € 179</span></li>
+          <li class="cap"><h3>Battesimo</h3><p>Abito e cuffia in cotone ricamato, da 0 a 24 mesi.</p><span>da € 69</span></li>
+        </ol>
+        <div class="gal__progress" aria-hidden="true"><span id="gal-bar"></span></div>
+      </div>
+    </div>
+    <ul class="gal__flat" role="list">
+      <li><img src="assets/img/donna-1949.jpg" width="1705" height="1800" alt="Donna in abito da sera lungo con guanti alti, foto in bianco e nero" loading="lazy"><p>Donna · da € 149</p></li>
+      <li><img src="assets/img/cappotto-1951.jpg" width="982" height="1024" alt="Donna in cappotto di lana spigato davanti a un faro" loading="lazy"><p>Capispalla · da € 229</p></li>
+      <li><img src="assets/img/bambina-tulle.jpg" width="1096" height="1537" alt="Bambina in abito di tulle bianco con fiori rossi" loading="lazy"><p>Bambina · da € 89</p></li>
+      <li><img src="assets/img/bambini.webp" width="310" height="385" alt="Illustrazione: bambino in completo bianco e bambina in abito con fiocco dorato" loading="lazy"><p>Bambino · da € 99</p></li>
+      <li><img src="assets/img/cerimonia.jpg" width="1800" height="1350" alt="Frac nero e abito da sposa in pizzo su manichini" loading="lazy"><p>Cerimonia · da € 179</p></li>
+      <li><img src="assets/img/battesimo.jpg" width="1127" height="1800" alt="Abito da battesimo ricamato in cotone bianco" loading="lazy"><p>Battesimo · da € 69</p></li>
+    </ul>
+  </section>
+
+  <div class="day">
+
+    <section class="family" aria-labelledby="fam-h">
+      <h2 class="family__title" id="fam-h"><span class="line">Mamma e figli,</span> <span class="line line--in">vestiti insieme</span></h2>
+      <div class="family__grid">
+        <figure class="family__logo tilt">
+          <img src="assets/img/logo-avorio.webp" width="1170" height="1147" alt="Il marchio di RC Boutique in versione avorio: le lettere RC dorate sotto la corona, tra una donna in tailleur bianco e due bambini" loading="lazy">
+        </figure>
+        <div class="family__text">
+          <p class="statement">Stesso camerino, stessa cura: un solo look per tutta la famiglia.</p>
+          <p>Scegliamo ogni capo una stagione alla volta e in poche taglie, così il vestito della comunione non lo ritrovi in tutta la città. Tessuti naturali, finiture pulite e una sarta in negozio per gli ultimi ritocchi.</p>
+          <dl class="family__facts">
+            <div><dt>Donna</dt><dd>40–52</dd></div>
+            <div><dt>Bambini</dt><dd>0–14 anni</dd></div>
+            <div><dt>Ritocchi</dt><dd>5 giorni</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="list" id="listino" aria-labelledby="list-h">
+      <div class="list__head">
+        <h2 id="list-h" class="h2">Il listino</h2>
+        <p>Prezzi di partenza in boutique. Ogni capo si prova in negozio; orli e maniche sono inclusi sopra i € 150.</p>
+      </div>
+      <div class="list__peek" aria-hidden="true"><img alt="" src="assets/img/donna-1949.jpg" width="1705" height="1800"></div>
+      <table class="price">
+        <caption class="sr">Articoli, dettagli, taglie e prezzi di partenza</caption>
+        <thead class="sr"><tr><th scope="col">Articolo</th><th scope="col">Dettaglio</th><th scope="col">Taglie</th><th scope="col">Prezzo</th></tr></thead>
+        <tbody>
+          <tr class="price__group"><th colspan="4" scope="colgroup">Donna</th></tr>
+          <tr data-img="assets/img/donna-1949.jpg"><td>Abito da sera</td><td>Lungo o midi</td><td>40–52</td><td>da € 149</td></tr>
+          <tr data-img="assets/img/donna-1949.jpg"><td>Tailleur pantalone</td><td>Lana e lino</td><td>40–52</td><td>da € 189</td></tr>
+          <tr data-img="assets/img/tessuto-oro.jpg"><td>Camicia in seta</td><td>Sei colori</td><td>40–50</td><td>da € 79</td></tr>
+          <tr data-img="assets/img/cappotto-1951.jpg"><td>Cappotto</td><td>Lana spigata</td><td>40–52</td><td>da € 229</td></tr>
+        </tbody>
+        <tbody>
+          <tr class="price__group"><th colspan="4" scope="colgroup">Bambini</th></tr>
+          <tr data-img="assets/img/bambina-tulle.jpg"><td>Abito in tulle</td><td>Bambina</td><td>2–14 anni</td><td>da € 89</td></tr>
+          <tr data-img="assets/img/bambini.webp"><td>Completo in lino</td><td>Bambino</td><td>2–14 anni</td><td>da € 99</td></tr>
+          <tr data-img="assets/img/bambini.webp"><td>Camicia e papillon</td><td>Bambino</td><td>2–14 anni</td><td>da € 45</td></tr>
+          <tr data-img="assets/img/bambina-tulle.jpg"><td>Ballerine in raso</td><td>Bambina</td><td>22–35</td><td>da € 49</td></tr>
+        </tbody>
+        <tbody>
+          <tr class="price__group"><th colspan="4" scope="colgroup">Cerimonia</th></tr>
+          <tr data-img="assets/img/bambina-tulle.jpg"><td>Abito da comunione</td><td>Con velo</td><td>8–11 anni</td><td>da € 179</td></tr>
+          <tr data-img="assets/img/cerimonia.jpg"><td>Completo da paggetto</td><td>Tre pezzi</td><td>3–10 anni</td><td>da € 129</td></tr>
+          <tr data-img="assets/img/battesimo.jpg"><td>Set battesimo</td><td>Abito e cuffia</td><td>0–24 mesi</td><td>da € 69</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="look" id="look" aria-labelledby="look-h">
+      <div class="look__left">
+        <h2 id="look-h" class="h2">Il look di famiglia</h2>
+        <p class="look__lede">Scegli l’occasione e l’età di tuo figlio: ti proponiamo un abbinamento e la taglia da provare in boutique.</p>
+        <form class="look__form" id="look-form" action="mailto:ciao@rcboutique.it" method="get">
+          <fieldset>
+            <legend>Occasione</legend>
+            <div class="chips">
+              <label><input type="radio" name="occ" value="matrimonio" checked><span>Matrimonio</span></label>
+              <label><input type="radio" name="occ" value="comunione"><span>Comunione</span></label>
+              <label><input type="radio" name="occ" value="battesimo"><span>Battesimo</span></label>
+              <label><input type="radio" name="occ" value="domenica"><span>Pranzo della domenica</span></label>
+              <label><input type="radio" name="occ" value="sera"><span>Una sera fuori</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Per</legend>
+            <div class="chips">
+              <label><input type="radio" name="kid" value="bambina" checked><span>Bambina</span></label>
+              <label><input type="radio" name="kid" value="bambino"><span>Bambino</span></label>
+            </div>
+          </fieldset>
+          <div class="age">
+            <label for="age">Età <output id="age-out" for="age">6 anni</output></label>
+            <input type="range" id="age" name="age" min="0" max="14" step="1" value="6">
+          </div>
+        </form>
+      </div>
+      <div class="look__right" aria-live="polite">
+        <figure class="look__photo">
+          <div class="look__frame"><img id="look-img" src="assets/img/cerimonia.jpg" width="1800" height="1350" alt="Frac nero e abito da sposa in pizzo su manichini"></div>
+          <img class="look__pair" src="assets/img/mamma.webp" width="275" height="570" alt="Illustrazione RC Boutique: una donna in tailleur bianco con borsa dorata">
+        </figure>
+        <dl class="look__result">
+          <div><dt>Per te</dt><dd id="r-mom">Abito midi in crêpe avorio con cintura dorata</dd></div>
+          <div><dt id="r-kid-who">Per lei</dt><dd id="r-kid">Abito in tulle avorio con fiocco in raso oro</dd></div>
+          <div><dt>Taglia da provare</dt><dd id="r-size">6 anni · 116 cm</dd></div>
+          <div><dt>Insieme da</dt><dd id="r-price">€ 238</dd></div>
+        </dl>
+        <a class="btn btn--gold magnetic" id="r-cta" href="mailto:ciao@rcboutique.it?subject=Prova%20look%20di%20famiglia"><span>Prenota la prova</span></a>
+      </div>
+    </section>
+
+  </div>
 
   <section class="service" aria-labelledby="service-h">
-    <div class="service__pin">
-      <h2 id="service-h" class="service__title">Su misura</h2>
-      <p class="body">Tre servizi che in boutique sono gratuiti, perché un abito giusto si sceglie con calma.</p>
+    <div class="service__head">
+      <h2 id="service-h" class="h2">Su misura</h2>
+      <p>Tre servizi gratuiti in boutique, perché un abito giusto si sceglie con calma.</p>
     </div>
-    <div class="service__items">
-      <article class="item reveal">
-        <img src="assets/img/madre-figlia-1835.jpg" width="1155" height="1800" alt="Figurino di moda del 1835: una madre seduta in abito verde e la figlia in abito giallo con cappellino" loading="lazy">
+    <div class="service__row">
+      <article class="svc svc--a">
+        <div class="svc__img"><img src="assets/img/madre-figlia-1835.jpg" width="1155" height="1800" alt="Figurino di moda del 1835: madre seduta in abito verde e figlia in abito giallo" loading="lazy"></div>
         <h3>Prova privata</h3>
-        <p>Su appuntamento il camerino è riservato alla vostra famiglia per un’ora: un caffè per i grandi, un succo per i piccoli, e nessuna fretta.</p>
+        <p>Su appuntamento il camerino è riservato alla vostra famiglia per un’ora: un caffè per i grandi, un succo per i piccoli, nessuna fretta.</p>
       </article>
-      <article class="item reveal">
-        <img src="assets/img/tessuto-oro.jpg" width="1217" height="1230" alt="Primo piano di un tessuto intrecciato con fili d’oro e righe rosse" loading="lazy">
+      <article class="svc svc--b">
+        <div class="svc__img"><img src="assets/img/tessuto-oro.jpg" width="1217" height="1230" alt="Primo piano di un tessuto intrecciato con fili d’oro" loading="lazy"></div>
         <h3>Ritocchi in sartoria</h3>
         <p>Orli, maniche e girovita sistemati dalla nostra sarta in cinque giorni lavorativi. Inclusi negli acquisti sopra i € 150.</p>
       </article>
-      <article class="item reveal">
-        <img src="assets/img/battesimo.jpg" width="1127" height="1800" alt="Un abito da battesimo antico in cotone bianco ricamato, lungo fino a terra" loading="lazy">
+      <article class="svc svc--c">
+        <div class="svc__img"><img src="assets/img/battesimo.jpg" width="1127" height="1800" alt="Abito da battesimo antico in cotone bianco ricamato" loading="lazy"></div>
         <h3>Lista cerimonia</h3>
         <p>Diteci la data dell’evento: prepariamo i capi di tutta la famiglia e li teniamo da parte, stirati e confezionati, fino al ritiro.</p>
       </article>
@@ -184,50 +211,52 @@
   </section>
 
   <section class="faq" aria-labelledby="faq-h">
-    <dl class="faq__table">
-      <div class="faq__row"><dt><h2 id="faq-h" class="faq__head reveal">Domande frequenti</h2></dt><dd></dd></div>
-      <div class="faq__row reveal"><dt>Posso prenotare una prova?</dt><dd>Sì. Scrivici o chiamaci e ti riserviamo il camerino nell’orario che preferisci, anche il sabato pomeriggio.</dd></div>
-      <div class="faq__row reveal"><dt>Fate cambi e resi?</dt><dd>Cambi entro 14 giorni con scontrino e cartellino. I capi da cerimonia già ritoccati in sartoria non si possono cambiare.</dd></div>
-      <div class="faq__row reveal"><dt>Per quali età vestite i bambini?</dt><dd>Da 0 a 14 anni: set battesimo da 0 a 24 mesi, poi abiti e completi dalla taglia 2 alla 14 anni.</dd></div>
-      <div class="faq__row reveal"><dt>Spedite in tutta Italia?</dt><dd>Sì, con corriere in 48 ore. Scrivici con foto e taglia del capo che ti interessa; la spedizione è gratuita sopra € 120.</dd></div>
-      <div class="faq__row reveal"><dt>Avete buoni regalo?</dt><dd>Sì, da € 50 in su, in una busta nera con la corona dorata. Valgono dodici mesi su tutta la boutique.</dd></div>
-    </dl>
+    <h2 id="faq-h" class="h2">Domande frequenti</h2>
+    <div class="faq__list">
+      <details open><summary>Posso prenotare una prova?<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M10 4v12"/></svg></summary><p>Sì. Scrivici o chiamaci e ti riserviamo il camerino nell’orario che preferisci, anche il sabato pomeriggio.</p></details>
+      <details><summary>Fate cambi e resi?<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M10 4v12"/></svg></summary><p>Cambi entro 14 giorni con scontrino e cartellino. I capi da cerimonia già ritoccati in sartoria non si possono cambiare.</p></details>
+      <details><summary>Per quali età vestite i bambini?<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M10 4v12"/></svg></summary><p>Da 0 a 14 anni: set battesimo da 0 a 24 mesi, poi abiti e completi dalla taglia 2 alla 14 anni.</p></details>
+      <details><summary>Spedite in tutta Italia?<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M10 4v12"/></svg></summary><p>Sì, con corriere in 48 ore. Scrivici con foto e taglia del capo che ti interessa; la spedizione è gratuita sopra € 120.</p></details>
+      <details><summary>Avete buoni regalo?<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M10 4v12"/></svg></summary><p>Sì, da € 50 in su, in una busta nera con la corona dorata. Valgono dodici mesi su tutta la boutique.</p></details>
+    </div>
   </section>
 
   <section class="contact" id="visita" aria-labelledby="contact-h">
-    <h2 id="contact-h" class="contact__lede reveal">Scrivici per una prova, una taglia o un abito da cerimonia.</h2>
-    <a class="contact__mail" href="mailto:ciao@rcboutique.it">ciao@<br class="br-m">rcboutique.it</a>
-    <div class="contact__foot">
-      <dl class="contact__hours">
-        <div><dt>Indirizzo</dt><dd>Via Roma 1, Italia</dd></div>
-        <div><dt>Telefono</dt><dd>+39 000 000 0000</dd></div>
-        <div><dt>Martedì – Sabato</dt><dd>9:30–13:00 · 16:00–20:00</dd></div>
-        <div><dt>Domenica</dt><dd>Su appuntamento</dd></div>
-      </dl>
-      <p class="contact__social"><a href="#visita">Instagram</a> <a href="#visita">Facebook</a> <a href="#visita">WhatsApp</a></p>
-    </div>
+    <h2 id="contact-h" class="contact__lede">Scrivici per una prova, una taglia o un abito da cerimonia.</h2>
+    <a class="contact__mail" href="mailto:ciao@rcboutique.it"><span>ciao@</span><span>rcboutique.it</span></a>
+    <dl class="contact__info">
+      <div><dt>Indirizzo</dt><dd>Via Roma 1, Italia</dd></div>
+      <div><dt>Telefono</dt><dd><a href="tel:+390000000000">+39 000 000 0000</a></dd></div>
+      <div><dt>Martedì – Sabato</dt><dd>9:30–13:00 · 16:00–20:00</dd></div>
+      <div><dt>Domenica</dt><dd>Su appuntamento</dd></div>
+    </dl>
   </section>
 
 </main>
 
-<footer class="footer">
-  <img class="footer__img" src="assets/img/galleria-arco.jpg" width="1350" height="1800" alt="L’arco d’ingresso di una galleria ottocentesca con stucchi dorati e volta in vetro" loading="lazy">
-  <div class="footer__top">
+<footer class="foot">
+  <img class="foot__logo" src="assets/img/logo-nero.webp" width="1170" height="1137" alt="RC Boutique · Donna · Bambini · Moda, stile e lusso per tutta la famiglia" loading="lazy">
+  <div class="foot__row">
     <ul>
-      <li><a href="#collezioni">Collezioni</a></li>
+      <li><a href="#galleria">Collezioni</a></li>
       <li><a href="#listino">Listino</a></li>
       <li><a href="#look">Look di famiglia</a></li>
       <li><a href="#visita">Visita</a></li>
     </ul>
-    <p>ciao@rcboutique.it<br>+39 000 000 0000<br>Via Roma 1, Italia</p>
+    <ul class="foot__social">
+      <li><a href="#visita">Instagram</a></li>
+      <li><a href="#visita">Facebook</a></li>
+      <li><a href="#visita">WhatsApp</a></li>
+    </ul>
   </div>
-  <div class="footer__bottom">
-    <p class="footer__name" aria-hidden="true"><span class="wordmark wordmark--foot">RC Boutique</span></p>
-    <p class="footer__legal">© 2026 RC Boutique · Donna e Bambini · P.IVA 00000000000</p>
-    <p class="footer__credits">Fotografie: “Galleria Vittorio Emanuele II (by night-1)”, Hermes from mars, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Galleria Vittorio Emanuele II Milan”, VriaA, CC0; “Galleria Vittorio Emanuele II (Milan) at night”, Ghaly, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Gouden weefsel”, Marikevanroon20, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Fashion model, Washington, D.C., 1949” e “Fashion photo of model and lighthouse, 1951”, Toni Frissell, Library of Congress, pubblico dominio; “Flower girl in tutu dress”, Topgun90, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; “Wedding attire”, Steven-L-Johnson, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>; “Journal des Dames et des Modes, 1835”, Rijksmuseum, CC0; “Christening dress”, The Met, CC0. Tutte via <a href="https://commons.wikimedia.org">Wikimedia Commons</a>.</p>
-  </div>
+  <p class="foot__legal">© 2026 RC Boutique · Donna e Bambini · P.IVA 00000000000</p>
+  <p class="foot__credits">Fotografie via <a href="https://commons.wikimedia.org">Wikimedia Commons</a>: “Galleria Vittorio Emanuele II (by night-1)”, Hermes from mars, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Gouden weefsel”, Marikevanroon20, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Fashion model, Washington, D.C., 1949” e “Fashion photo of model and lighthouse, 1951”, Toni Frissell, Library of Congress, pubblico dominio; “Flower girl in tutu dress”, Topgun90, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; “Wedding attire”, Steven-L-Johnson, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>; “Journal des Dames et des Modes, 1835”, Rijksmuseum, CC0; “Christening dress”, The Met, CC0. Corona 3D e marmo realizzati per questo sito.</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <script src="main.js" defer></script>
+<script type="module" src="scene.js"></script>
 </body>
 </html>
